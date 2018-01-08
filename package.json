@@ -1,7 +1,6 @@
 {
   "name": "auth-boilerplate",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,6 +21,16 @@
     "passport-local": "^1.0.0",
     "pg": "^6.4.1",
     "pg-hstore": "^2.3.2",
-    "sequelize": "^4.29.0"
-  }
+    "sequelize": "^4.29.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rallysport206/Open-Tee.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rallysport206/Open-Tee/issues"
+  },
+  "homepage": "https://github.com/rallysport206/Open-Tee#readme",
+  "description": ""
 }
