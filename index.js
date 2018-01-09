@@ -6,6 +6,7 @@ var flash = require('connect-flash');
 var isLoggedIn = require('./middleware/isLoggedIn');
 var passport = require('./config/passportConfig');
 var session = require('express-session');
+var request = require ('request');
 var app = express();
 
 app.set('view engine', 'ejs');
@@ -32,7 +33,21 @@ app.get('/', function(req,res) {
 app.get('/profile', isLoggedIn, function(req,res) {
   res.render('profile');
 });
-
+app.get('/', function(req, res) {
+  var qs = {
+    s: 'Seattle Courses',
+    apikey: process.env.API_KEY
+  };
+  request({
+    url: 'https://api.yelp.com/v3/businesses/golf-courses-seattle',
+    qs: qs
+  }, function(error, response, body){
+    if (!error && response.statusCode == 200){
+      var dataObj = JSON.parse(body);
+      res.send(dataObj.Search);
+    }
+  });
+});
 app.use('/auth', require('./controllers/auth'));
-
+//listen
 app.listen(process.env.PORT || 3050);
