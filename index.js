@@ -35,4 +35,4 @@ app.get('/profile', isLoggedIn, function(req,res) {
 
 app.use('/auth', require('./controllers/auth'));
 
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 3050);
