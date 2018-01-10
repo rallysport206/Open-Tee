@@ -33,6 +33,9 @@ app.get('/', function(req,res) {
 app.get('/profile', isLoggedIn, function(req,res) {
   res.render('profile');
 });
+app.get('/schedule', isLoggedIn, function(req,res) {
+  res.render('event/schedule')
+})
 app.get('/', function(req, res) {
   var qs = {
     s: 'Seattle Courses',
