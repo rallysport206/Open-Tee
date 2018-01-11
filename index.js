@@ -39,9 +39,6 @@ app.get('/schedule', isLoggedIn, function(req,res) {
 app.get('/active', isLoggedIn, function(req, res) {
   res.render('event/active')
 });
-app.post('/active', function(req, res) {
-  res.send('hi')
-});
 // app.get('/', function(req, res) {
 //   var qs = {
 //     s: 'Seattle Courses',
@@ -58,5 +55,6 @@ app.post('/active', function(req, res) {
 //   });
 // });
 app.use('/auth', require('./controllers/auth'));
+app.use('/event', require('./controllers/event'));
 //listen
 app.listen(process.env.PORT || 3050);

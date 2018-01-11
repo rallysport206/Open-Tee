@@ -8,14 +8,14 @@ var client = yelp.client(process.env.API_KEY);
 
 function yelpSearch(searchTerm, location, callback){
   client.search({
-    term:searchTerm,
+    term: searchTerm,
     location: location
-  }).then(response =>() {
+  }).then(response => {
     response.jsonBody.businesses.forEach(function(item){
-
+        
     });
     callback(response.jsonBody.businesses);
-  }).catch(e =>{
+  }).catch(e => {
     console.log(e);
   });
 }
@@ -32,7 +32,7 @@ router.get('/schedule', function(req, res) {
 
 router.post('/active', function(req, res) {
   console.log('req.body');
-  yelpSearch(req.body.course, 'seattle', function(businesses){
+  yelpSearch(req.body.course, 'Seattle', function(businesses){
     res.render('event/active', {businesses: businesses});
   });
 });
