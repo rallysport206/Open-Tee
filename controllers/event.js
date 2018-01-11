@@ -12,7 +12,7 @@ function yelpSearch(searchTerm, location, callback){
     location: location
   }).then(response => {
     response.jsonBody.businesses.forEach(function(item){
-        
+
     });
     callback(response.jsonBody.businesses);
   }).catch(e => {
@@ -27,7 +27,7 @@ router.get('/', function(req, res) {
 
 router.get('/schedule', function(req, res) {
   console.log('find rest route reach');
-  res.render('event/schedule', {businesses: null});
+  res.render('event/schedule', {businesses: [null]});
 });
 
 router.post('/active', function(req, res) {
@@ -36,3 +36,4 @@ router.post('/active', function(req, res) {
     res.render('event/active', {businesses: businesses});
   });
 });
+module.exports = router;

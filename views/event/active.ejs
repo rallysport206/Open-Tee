@@ -1,1 +1,11 @@
 <h2>Upcoming Rounds</h2>
+<div class="results">
+
+  <% if (businesses) { %>
+  <% for (var item of businesses) { %>
+    <div><h2>Name: <%= item.name %></h2></div>
+    <div>Rating: <%= item.rating %></div>
+    <img src="<%= item.image_url%>">
+  <% }; %>
+  <% } %>
+</div>

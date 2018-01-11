@@ -4,12 +4,9 @@ module.exports = (sequelize, DataTypes) => {
     date: DataTypes.DATE,
     time: DataTypes.TIME,
     course: DataTypes.STRING
-  }, {
-    classMethods: {
-      associate: function(models) {
-       models.schedule.belongsTo(models.user);
-      }
-    }
   });
+      schedule.associate = function(models) {
+       models.schedule.belongsTo(models.user, {through: models.schedule});
+     };
   return schedule;
 };
