@@ -35,7 +35,11 @@ app.get('/profile', isLoggedIn, function(req,res) {
 });
 app.get('/schedule', isLoggedIn, function(req,res) {
   res.render('event/schedule')
-})
+});
+app.get('/active', isLoggedIn, function(req, res) {
+  res.render('event/active')
+});
+
 app.get('/', function(req, res) {
   var qs = {
     s: 'Seattle Courses',
