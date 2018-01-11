@@ -39,22 +39,24 @@ app.get('/schedule', isLoggedIn, function(req,res) {
 app.get('/active', isLoggedIn, function(req, res) {
   res.render('event/active')
 });
-
-app.get('/', function(req, res) {
-  var qs = {
-    s: 'Seattle Courses',
-    apikey: process.env.API_KEY
-  };
-  request({
-    url: 'https://api.yelp.com/v3/businesses/golf-courses-seattle',
-    qs: qs
-  }, function(error, response, body){
-    if (!error && response.statusCode == 200){
-      var dataObj = JSON.parse(body);
-      res.send(dataObj.Search);
-    }
-  });
+app.post('/active', function(req, res) {
+  res.send('hi')
 });
+// app.get('/', function(req, res) {
+//   var qs = {
+//     s: 'Seattle Courses',
+//     apikey: process.env.API_KEY
+//   };
+//   request({
+//     url: 'https://api.yelp.com/v3/businesses/golf-courses-seattle',
+//     qs: qs
+//   }, function(error, response, body){
+//     if (!error && response.statusCode == 200){
+//       var dataObj = JSON.parse(body);
+//       res.send(dataObj.Search);
+//     }
+//   });
+// });
 app.use('/auth', require('./controllers/auth'));
 //listen
 app.listen(process.env.PORT || 3050);
