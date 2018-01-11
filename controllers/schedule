@@ -1,0 +1,6 @@
+var express = require('express');
+var route = express.Router();
+var db = require('../models');
+var passport = require('../config/ppConfig');
+var isLoggedIn = require('../middleware/isLoggedIn');
+var flash = require('connect-flash');
