@@ -3,4 +3,21 @@
   <h3>Welcome Back, <%= currentUser.firstname%>!</h3>
   <a href='/schedule'><button type="button" class="btn btn-default btn-lng">Schedule Tee Time</button></a>
   <a href='/active'><button type="button" class="btn btn-default">Current Bookings</button></a>
+
+  <% if(schedule.length <=0) { %>
+    <h2 class='text-center'>Nothing Post</h2>
+  <%} else {%>
+  <% schedule.forEach(function(schedule){%>
+  <div class="list">
+    <br>
+    <ul>
+        <div><li><h4><%= schedule.date %></h4></li></div>
+        <div><li><h4><%= schedule.time %></h4></li></div>
+        <div><li><h4><%= schedule.course %></h4></li></div>
+    </ul>
+        <form class="delete-fav" action="/profile/<%= schedule.id %>">
+        <button class="btn btn-danger glyphicon glyphicon-trash" type="submit"></button>
+  </div>
+  <% }); %>
+  <% } %>
 </div>

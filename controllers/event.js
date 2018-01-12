@@ -33,11 +33,11 @@ router.get('/schedule', function(req, res) {
 
 router.post('/active', function(req, res) {
   console.log('req.body');
-  yelpSearch(req.body.course, 'Seattle', function(businesses){
+  yelpSearch(req.body.course, 'Seattle, Golf', function(businesses){
     res.render('event/active', {businesses: businesses});
   });
 });
-router.get('/confirmed', isLoggedIn, function(req, res) {
+router.get('/schedule', isLoggedIn, function(req, res) {
   res.render('event/confirmed');
 });
 
@@ -50,7 +50,7 @@ router.post('/schedule', isLoggedIn, function(req, res){
     time: req.body.time,
     userId: req.user.id
   }).then(function(createdSchedule){
-    res.redirect('/confirmed/');
+    res.redirect('/profile');
   }).catch(function(err){
     res.send (err.message)
   });

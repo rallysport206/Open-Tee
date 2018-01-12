@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     userId: DataTypes.INTEGER
   });
       schedule.associate = function(models) {
-       models.schedule.belongsTo(models.user, {through: models.schedule});
+       models.schedule.belongsTo(models.user);
      };
   return schedule;
 };

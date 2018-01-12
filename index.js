@@ -1,6 +1,7 @@
 require('dotenv').config();
 var bodyParser = require('body-parser');
 var express = require('express');
+var db = require('./models');
 var ejsLayouts = require('express-ejs-layouts');
 var flash = require('connect-flash');
 var isLoggedIn = require('./middleware/isLoggedIn');
@@ -31,8 +32,20 @@ app.get('/', function(req,res) {
   res.render('home');
 });
 app.get('/profile', isLoggedIn, function(req,res) {
-  res.render('profile');
+  console.log(req.body);
+///do database call and put res.render in a then promise pass in result of database call into object
+  db.schedule.find({
+    where: {userId:res.locals.currentUser.dataValues.id}
+  }).then(function(schedule) {
+    console.log('comment schedule',schedule);
+    var schedule = JSON.parse(body);
+    res.render('profile', {schedule: schedule});
+  }).catch(function(err){
+    res.send('nope', err)
+
+  });
 });
+
 app.get('/schedule', isLoggedIn, function(req,res) {
   res.render('event/schedule');
 });
