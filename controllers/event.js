@@ -3,6 +3,7 @@ var express = require('express');
 var passport = require('../config/passportConfig');
 var db = require('../models');
 var router = express.Router();
+var isLoggedIn = require('../middleware/isLoggedIn');
 var yelp = require('yelp-fusion');
 var client = yelp.client(process.env.API_KEY);
 
@@ -36,4 +37,23 @@ router.post('/active', function(req, res) {
     res.render('event/active', {businesses: businesses});
   });
 });
+router.get('/schedule', isLoggedIn, function(req, res) {
+  res.render('event/schedule');
+});
+
+router.post('/schedule', isLoggedIn, function(req, res){
+  // res.send('working');
+  // console.log(req.body);
+  db.schedule.create({
+    course: req.body.course,
+    date: req.body.date,
+    time: req.body.time,
+    userId: req.user.id
+  }).then(function(createdSchedule){
+    res.redirect('/schedule/' + createdSchedule.userId);
+  }).catch(function(err){
+    res.send (err.message)
+  });
+});
+
 module.exports = router;

@@ -3,7 +3,8 @@ module.exports = (sequelize, DataTypes) => {
   var schedule = sequelize.define('schedule', {
     date: DataTypes.DATE,
     time: DataTypes.TIME,
-    course: DataTypes.STRING
+    course: DataTypes.STRING,
+    userId: DataTypes.INTEGER
   });
       schedule.associate = function(models) {
        models.schedule.belongsTo(models.user, {through: models.schedule});

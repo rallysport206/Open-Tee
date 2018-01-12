@@ -56,5 +56,6 @@ app.get('/active', isLoggedIn, function(req, res) {
 // });
 app.use('/auth', require('./controllers/auth'));
 app.use('/event', require('./controllers/event'));
+// app.use('/schedule', require('./controllers/schedule'));
 //listen
 app.listen(process.env.PORT || 3050);
