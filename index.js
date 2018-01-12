@@ -34,10 +34,13 @@ app.get('/profile', isLoggedIn, function(req,res) {
   res.render('profile');
 });
 app.get('/schedule', isLoggedIn, function(req,res) {
-  res.render('event/schedule')
+  res.render('event/schedule');
 });
 app.get('/active', isLoggedIn, function(req, res) {
-  res.render('event/active')
+  res.render('event/active');
+});
+app.get('/confirmed', isLoggedIn, function(req, res) {
+  res.render('event/confirmed');
 });
 // app.get('/', function(req, res) {
 //   var qs = {

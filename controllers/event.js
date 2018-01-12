@@ -37,8 +37,8 @@ router.post('/active', function(req, res) {
     res.render('event/active', {businesses: businesses});
   });
 });
-router.get('/schedule', isLoggedIn, function(req, res) {
-  res.render('event/schedule');
+router.get('/confirmed', isLoggedIn, function(req, res) {
+  res.render('event/confirmed');
 });
 
 router.post('/schedule', isLoggedIn, function(req, res){
@@ -50,7 +50,7 @@ router.post('/schedule', isLoggedIn, function(req, res){
     time: req.body.time,
     userId: req.user.id
   }).then(function(createdSchedule){
-    res.redirect('/schedule/' + createdSchedule.userId);
+    res.redirect('/confirmed/' + createdSchedule.userId);
   }).catch(function(err){
     res.send (err.message)
   });
