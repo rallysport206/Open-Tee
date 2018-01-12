@@ -50,7 +50,7 @@ router.post('/schedule', isLoggedIn, function(req, res){
     time: req.body.time,
     userId: req.user.id
   }).then(function(createdSchedule){
-    res.redirect('/confirmed/' + createdSchedule.userId);
+    res.redirect('/confirmed/');
   }).catch(function(err){
     res.send (err.message)
   });
