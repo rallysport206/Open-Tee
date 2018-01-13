@@ -38,10 +38,10 @@ app.get('/profile', isLoggedIn, function(req,res) {
     where: {userId:res.locals.currentUser.dataValues.id}
   }).then(function(schedule) {
     console.log('comment schedule',schedule);
-    var schedule = JSON.parse(body);
+    // var schedule = JSON.parse(req.body);
     res.render('profile', {schedule: schedule});
   }).catch(function(err){
-    res.send('nope', err)
+    res.send(404, err)
 
   });
 });

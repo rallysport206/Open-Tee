@@ -7,7 +7,7 @@
   <% if(schedule.length <=0) { %>
     <h2 class='text-center'>Nothing Post</h2>
   <%} else {%>
-  <% schedule.forEach(function(schedule){%>
+  <% for (let item in schedule){%>
   <div class="list">
     <br>
     <ul>
@@ -18,6 +18,6 @@
         <form class="delete-fav" action="/profile/<%= schedule.id %>">
         <button class="btn btn-danger glyphicon glyphicon-trash" type="submit"></button>
   </div>
-  <% }); %>
   <% } %>
+  <% }; %>
 </div>
