@@ -1,0 +1,21 @@
+body{
+    font-family: 'Pontano Sans', sans-serif;
+    background-image: url("http://globalmedicalco.com/photos/globalmedicalco/10/48622.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    color: white;
+}
+h2{
+  color: white;
+  font-family: 'Pontano Sans', sans-serif;
+}
+.transparentbox{
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: .8;
+}
+label{
+  font-weight: bold;
+  color: #00000;
+}

@@ -50,13 +50,14 @@ router.post('/schedule', isLoggedIn, function(req, res){
     time: req.body.time,
     userId: req.user.id
   }).then(function(createdSchedule){
+    req.flash('success', 'Tee Time Scheduled!');
     res.redirect('/profile');
   }).catch(function(err){
     res.send (err.message)
   });
 });
 
-router.delete('./profile/:id', function(req, res) {
+router.delete('/:id', function(req, res) {
   // console.log('delete Route ID = ', req.params.id);
   db.schedule.destroy({
     where:{
