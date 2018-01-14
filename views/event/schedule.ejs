@@ -1,7 +1,16 @@
+<h2 class='text-center'>Search for Courses</h2>
+<form action="/event/active" method="post">
+  <div class="form-group">
+    <label>Course:</label>
+      <input type="text" name="course" class="form-control" placeholder="Search for Courses" required>
+    </div>
+    <input type="submit" value="Search" class="btn btn-success">
+</form>
+<hr>
 <h2 class = 'text-center'>Schedule a tee time</h2>
 <form action="/event/schedule" method="post">
   <div class="form-group">
-    <label>Find Course:</label>
+    <label>Course:</label>
     <input type="text" name="course" class="form-control" placeholder="Course Name" required>
   </div>
   <div class="form-group">

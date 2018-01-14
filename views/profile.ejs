@@ -2,10 +2,10 @@
 <div>
   <h3>Welcome Back, <%= currentUser.firstname%>!</h3>
   <a href='/schedule'><button type="button" class="btn btn-default btn-lng">Schedule Tee Time</button></a>
-  <a href='/active'><button type="button" class="btn btn-default">Current Bookings</button></a>
+  <a href='/active'><button type="button" class="btn btn-default">Search Courses</button></a>
 
   <% if(schedule.length <=0) { %>
-    <h2 class='text-center'>Nothing Post</h2>
+    <h2 class='text-center'>Nothing Posted</h2>
   <%} else {%>
   <% for (let item in schedule){%>
   <div class="list">

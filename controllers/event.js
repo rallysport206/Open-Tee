@@ -41,20 +41,6 @@ router.get('/schedule', isLoggedIn, function(req, res) {
   res.render('event/confirmed');
 });
 
-router.delete('/:id', function(req, res) {
-  // console.log('delete Route ID = ', req.params.id);
-  db.schedule.destroy({
-    where:{
-      id: req.params.id}
-    }).then(function(deleted) {
-      console.log('deleted = ', deleted);
-      res.send('deleted!!!');
-    }).catch(function(err) {
-      console.log('error happend', err);
-      res.send('failed');
-    });
-  });
-
 router.post('/schedule', isLoggedIn, function(req, res){
   // res.send('working');
   // console.log(req.body);
@@ -70,5 +56,18 @@ router.post('/schedule', isLoggedIn, function(req, res){
   });
 });
 
+router.delete('./profile/:id', function(req, res) {
+  // console.log('delete Route ID = ', req.params.id);
+  db.schedule.destroy({
+    where:{
+      id: req.params.id}
+    }).then(function(deleted) {
+      console.log('deleted = ', deleted);
+      res.send('deleted!!!');
+    }).catch(function(err) {
+      console.log('error happend', err);
+      res.send('failed');
+    });
+  });
 
 module.exports = router;

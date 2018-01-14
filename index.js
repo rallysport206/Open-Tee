@@ -42,7 +42,6 @@ app.get('/profile', isLoggedIn, function(req,res) {
     res.render('profile', {schedule: schedule});
   }).catch(function(err){
     res.send(404, err)
-
   });
 });
 
