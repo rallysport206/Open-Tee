@@ -1,15 +1,18 @@
-<h1 class="text-center">Confirmed Tee Time!!</h1>
-  <div class="results">
-    <% if (businesses) { %>
-    <% for (var item of businesses) { %>
-      <div><h2>Course Name: <%= item.name %></h2></div>
-      <div><h4>Yelp Rating: <%= item.rating %></h4></div>
-      <div><h4>Address: <%= item.location.address1 %></h4></div>
-      <div><h4>Phone:<%= item.display_phone %></h4></div>
-      <img src="<%= item.image_url%>">
-      <a href="/profile" class="btn btn-danger delete-link">
-        Back to profile
-      </a>
-    <% }; %>
-    <% } %>
+<h2 class="text-center">Confirmed Tee Time!!</h2>
+  <div class="transparentbox">
+    <div class="results">
+      <% if (businesses) { %>
+      <% for (var item of businesses) { %>
+        <div><h2>Course Name: <%= item.name %></h2></div>
+        <div><h4>Yelp Rating: <%= item.rating %></h4></div>
+        <div><h4>Address: <%= item.location.address1 %></h4></div>
+        <div><h4>Phone:<%= item.display_phone %></h4></div>
+        <img src="<%= item.image_url%>">
+      <br>
+        <a href="/profile" class="btn btn-danger delete-link">
+          Back to profile
+        </a>
+      <% }; %>
+      <% } %>
+    </div>
   </div>

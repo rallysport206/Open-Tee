@@ -1,21 +1,44 @@
 body{
     font-family: 'Pontano Sans', sans-serif;
+    font-weight: bold;
+    color: #00000;
     background-image: url("http://globalmedicalco.com/photos/globalmedicalco/10/48622.jpg");
-    background-repeat: no-repeat;
-    background-size: auto;
-    color: white;
+    /*background-image: url("http://www.zengolfmechanics.com/wp-content/uploads/2016/07/Golf.jpg");*/
+    background-attachment: fixed;
+    background-size: cover;
 }
 h2{
   color: white;
   font-family: 'Pontano Sans', sans-serif;
 }
 .transparentbox{
-  margin: 30px;
-  background-color: #ffffff;
-  border: 1px solid black;
-  opacity: .8;
+  margin: 35px;
+  background-color:  rgba(255, 255, 255, .8);
+  border: 2px solid black;
+  text-align: center;
+  font-family: 'Pontano Sans', sans-serif;
+  font-weight: bold;
+  color: #00000;
 }
 label{
   font-weight: bold;
   color: #00000;
+}
+.text-center{
+  font-family: 'Pontano Sans', sans-serif;
+  font-weight: bold;
+  color: #00000;
+}
+.form-control{
+  font-family: 'Pontano Sans', sans-serif;
+  font-weight: bold;
+  color: #00000;
+}
+.btn{
+  margin-bottom: auto;
+}
+.login{
+  background-image: url("http://www.zengolfmechanics.com/wp-content/uploads/2016/07/Golf.jpg");
+  background-attachment: fixed;
+  background-size: cover;
 }
