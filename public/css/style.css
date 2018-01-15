@@ -11,11 +11,22 @@ h2{
   color: white;
   font-family: 'Pontano Sans', sans-serif;
 }
+.navbar{
+  font-family: 'Pontano Sans', sans-serif;
+}
 .transparentbox{
   margin: 35px;
   background-color:  rgba(255, 255, 255, .8);
   border: 2px solid black;
   text-align: center;
+  font-family: 'Pontano Sans', sans-serif;
+  font-weight: bold;
+  color: #00000;
+}
+.transparentbox2{
+  margin: 35px;
+  background-color:  rgba(255, 255, 255, .8);
+  border: 2px solid black;
   font-family: 'Pontano Sans', sans-serif;
   font-weight: bold;
   color: #00000;
@@ -35,10 +46,15 @@ label{
   color: #00000;
 }
 .btn{
-  margin-bottom: auto;
+  padding-bottom: 20px;
 }
 .login{
   background-image: url("http://www.zengolfmechanics.com/wp-content/uploads/2016/07/Golf.jpg");
   background-attachment: fixed;
   background-size: cover;
+}
+.yelpImg{
+  height: 400px;
+  width: 400px;
+  padding-bottom: 10px;
 }
