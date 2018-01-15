@@ -1,6 +1,6 @@
-<h2 class="text-center">Confirmed Tee Time!!</h2>
   <div class="transparentbox">
     <div class="results">
+      <h2 class="text-center">Results:</h2>
       <% if (businesses) { %>
       <% for (var item of businesses) { %>
         <div class= "col"><h2>Course Name: <%= item.name %></h2></div>
@@ -10,10 +10,10 @@
         <div class= "col"><h4>Phone:<%= item.display_phone %></h4></div>
         <img class="yelpImg col-sm" src="<%= item.image_url%>">
         <br>
-        <a href="/profile" class= "col-sm btn btn-info delete-link">
+        <a href="/profile" class= "col-sm btn btn-default btn-lng">
           Back to profile
         </a>
-        <a href="/schedule" class= "col-sm btn btn-primary delete-link">
+        <a href="/schedule" class= "col-sm btn btn-primary btn-lng">
           Schedule Tee Time
         </a>
       <% }; %>

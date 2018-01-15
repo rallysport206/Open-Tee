@@ -11,12 +11,16 @@ h2{
   color: white;
   font-family: 'Pontano Sans', sans-serif;
 }
+label{
+  font-weight: bold;
+  color: #00000;
+}
 .navbar{
   font-family: 'Pontano Sans', sans-serif;
 }
 .transparentbox{
   margin: 35px;
-  background-color:  rgba(255, 255, 255, .8);
+  background-color: rgba(255, 255, 255, .8);
   border: 2px solid black;
   text-align: center;
   font-family: 'Pontano Sans', sans-serif;
@@ -25,17 +29,18 @@ h2{
 }
 .transparentbox2{
   margin: 35px;
-  background-color:  rgba(255, 255, 255, .8);
+  background-color: rgba(255, 255, 255, .8);
   border: 2px solid black;
   font-family: 'Pontano Sans', sans-serif;
   font-weight: bold;
   color: #00000;
 }
-label{
+.text-center{
+  font-family: 'Pontano Sans', sans-serif;
   font-weight: bold;
   color: #00000;
 }
-.text-center{
+.col{
   font-family: 'Pontano Sans', sans-serif;
   font-weight: bold;
   color: #00000;
@@ -45,14 +50,11 @@ label{
   font-weight: bold;
   color: #00000;
 }
-.btn{
-  padding-bottom: 20px;
-}
-.login{
+/*.login{
   background-image: url("http://www.zengolfmechanics.com/wp-content/uploads/2016/07/Golf.jpg");
   background-attachment: fixed;
   background-size: cover;
-}
+}*/
 .yelpImg{
   height: 400px;
   width: 400px;
