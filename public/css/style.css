@@ -16,6 +16,9 @@ label{
   font-weight: bold;
   color: #00000;
 }
+li{
+  list-style: none;
+}
 .navbar{
   font-family: 'Pontano Sans', sans-serif;
 }

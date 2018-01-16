@@ -32,14 +32,17 @@ app.get('/', function(req,res) {
   // res.send('homepage coming soon!')
   res.render('home');
 });
+
+//schedule displays on profile
 app.get('/profile', isLoggedIn, function(req,res) {
   console.log(req.body);
 ///do database call and put res.render in a then promise pass in result of database call into object
-  db.schedule.find({
+  db.schedule.findAll({
     where: {userId:res.locals.currentUser.dataValues.id}
   }).then(function(schedule) {
     console.log('comment schedule',schedule);
     // var schedule = JSON.parse(req.body);
+    // let schedule = JSON.stringify(schedule)
     res.render('profile', {schedule: schedule});
   }).catch(function(err){
     res.send(404, err)

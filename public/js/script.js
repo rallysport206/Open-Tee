@@ -1,9 +1,9 @@
-$('.delete-fav').click(function(e) {
+$('.delete-course').click(function(e) {
   e.preventDefault();
   $.ajax({
     url: $(this).attr('action'),
-    method: 'DELETE'
-  }).success(function(data){
+    method: 'DELETE',
+  }).done(function(data){
     window.location.href = '/profile';
   });
 });
