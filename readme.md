@@ -2,6 +2,6 @@
 
 ### Planning process:
 Frame work sketch:
-![Frame sketch](https://drive.google.com/open?id=1yNm_zGeoSQ-pEE0-nWPYEFfXQL51IKhB)
+![Frame sketch](img/frame.jpg)
 Trello board:
-![Trello  board](https://drive.google.com/open?id=1MPRaplN67msdIJ37Lup3Yk3cw8G6P_g4)
+![Trello  board](img/screen.png)
