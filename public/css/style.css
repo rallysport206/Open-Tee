@@ -22,6 +22,9 @@ li{
 .navbar{
   font-family: 'Pontano Sans', sans-serif;
 }
+.navbar-default{
+    min-height: 200px;
+}
 .transparentbox{
   margin: 35px;
   background-color: rgba(255, 255, 255, .8);

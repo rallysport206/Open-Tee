@@ -16,8 +16,7 @@
           <div><li><h4><%= schedule.time %></h4></li></div>
           <div><li><h4><%= schedule.course %></h4></li></div>
       </ul>
-          <form class="delete-course" action="<%= schedule.id %>">
-          <button class="btn btn-danger glyphicon glyphicon-trash" type="submit"></button>
+          <a href="/event/<%=schedule.id%>" class="btn btn-danger glyphicon glyphicon-trash delete-course"></a>
     </div>
     <% }) %>
     <% }; %>
