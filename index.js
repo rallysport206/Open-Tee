@@ -58,6 +58,9 @@ app.get('/active', isLoggedIn, function(req, res) {
 app.get('/confirmed', isLoggedIn, function(req, res) {
   res.render('event/confirmed');
 });
+app.get('/search', isLoggedIn, function(req, res) {
+  res.render('event/search');
+});
 // app.get('/', function(req, res) {
 //   var qs = {
 //     s: 'Seattle Courses',
