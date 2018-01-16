@@ -78,3 +78,13 @@ li{
   height: 80px;
   width: 80px;
 }
+footer {
+    font-family: 'Pontano Sans', sans-serif;
+    text-align: center;
+    position: fixed;
+    height: 50px;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    font-size: 17px;
+}
