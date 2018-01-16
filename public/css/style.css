@@ -19,11 +19,14 @@ label{
 li{
   list-style: none;
 }
-.navbar{
+.container{
+  font-size: 16px;
+}
+.navbar-brand{
   font-family: 'Pontano Sans', sans-serif;
 }
 .navbar-default{
-    min-height: 200px;
+  min-height: 200px;
 }
 .transparentbox{
   margin: 35px;
@@ -41,6 +44,10 @@ li{
   font-family: 'Pontano Sans', sans-serif;
   font-weight: bold;
   color: #00000;
+}
+.links{
+  color: #00000;
+  font-weight: bold;
 }
 .text-center{
   font-family: 'Pontano Sans', sans-serif;
