@@ -2,7 +2,7 @@
 
 ### Planning Process:
 Frame work sketch:
-![Frame sketch](http://public/img/frame.jpg)
+![Frame sketch](public/img/frame.jpg)
 Trello board:
 ![Trello  board](public/img/screen.png)
 
@@ -20,8 +20,8 @@ As a golfer, You sometimes want to one stop location to search for courses and g
 ### Open Tee Deployed:
 [Heroku](http://opentee.herokuapp.com)
 
-![Homepage](http://public/img/homepage.png)
-![Search Results](http://public/img/search.png)
+![Homepage](public/img/homepage.png)
+![Search Results](public/img/search.png)
 
 ### If I Had More Time:
 * click on 'schedule tee time' and have the Schedule form auto fill with course information from search results.
