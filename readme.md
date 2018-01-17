@@ -2,7 +2,7 @@
 
 ### Planning Process:
 Frame work sketch:
-![Frame sketch](public/img/frame.jpg)
+![Frame sketch](public/img/frame.JPG)
 Trello board:
 ![Trello  board](public/img/screen.png)
 
