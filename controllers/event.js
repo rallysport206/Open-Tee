@@ -18,22 +18,14 @@ function yelpSearch(searchTerm, location, callback){
     });
     callback(response.jsonBody.businesses);
   }).catch(e => {
-    console.log(e);
-  });
+]  });
 }
-//
-// router.get('/', function(req, res) {
-//   console.log();
-//   res.send('api page');
-// });
 
 router.get('/schedule', function(req, res) {
-  console.log('find rest route reach');
   res.render('event/schedule', {businesses: [null]});
 });
 //yelp post route
 router.post('/active', function(req, res) {
-  console.log(req.body);
   yelpSearch(req.body.course, 'Seattle', function(businesses){
     res.render('event/active', {businesses: businesses});
   });
@@ -60,7 +52,6 @@ router.post('/schedule', isLoggedIn, function(req, res){
 
 //delete id route in profile
 router.delete('/:id', function(req, res) {
-  console.log('delete Route ID = ', req.params.id);
   db.schedule.findOne({
     where: {id: req.params.id}
   }).then(function(schedule){
@@ -68,10 +59,8 @@ router.delete('/:id', function(req, res) {
       where:{
         id: req.params.id}
       }).then(function(deleted) {
-        console.log('deleted = ', deleted);
         res.send('all good');
       }).catch(function(err) {
-        console.log('error happend', err);
         res.send('failed', err);
       });
     });

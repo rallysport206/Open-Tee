@@ -10,8 +10,6 @@ router.get('/schedule', isLoggedIn, function(req, res) {
 });
 
 router.post('/schedule', isLoggedIn, function(req, res){
-  // res.send('working');
-  // console.log(req.body);
   db.schedule.create({
     course: req.body.course,
     date: req.body.date,
