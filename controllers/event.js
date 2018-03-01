@@ -19,7 +19,7 @@ function yelpSearch(searchTerm, location, callback){
     callback(response.jsonBody.businesses);
   }).catch(e => {
   });
-}
+};
 
 router.get('/schedule', function(req, res) {
   res.render('event/schedule', {businesses: [null]});
