@@ -21,12 +21,16 @@ li{
 .container{
   font-size: 16px;
 }
+
+/* ----nav bar---- */
 .navbar-brand{
   font-family: 'Pontano Sans', sans-serif;
 }
 .navbar-default{
   min-height: 200px; 
 }
+
+/* ----Login/signup screen---- */
 .transparentbox{
   margin: 35px;
   background-color: rgba(255, 255, 255, .8);
@@ -36,6 +40,8 @@ li{
   font-weight: bold;
   color: #00000;
 }
+
+
 .transparentbox2{
   margin: 35px;
   background-color: rgba(255, 255, 255, .8);
@@ -63,11 +69,15 @@ li{
   font-weight: bold;
   color: #00000;
 }
+
+/* ----yelp image---- */
 .yelpImg{
   height: 400px;
   width: 400px;
   padding-bottom: 10px;
 }
+
+/* ----open tee logo---- */
 .logo{
   height: 80px;
   width: 80px;
