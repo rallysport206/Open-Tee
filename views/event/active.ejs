@@ -7,7 +7,7 @@
         <div class= "col"><h4>Yelp Rating: <%= item.rating %></h4></div>
         <div class= "col"><h4>Address: <%= item.location.address1 %></h4></div>
         <div class= "col"><h4><%= item.location.city %>, <%= item.location.state %> <%= item.location.zip_code %></h4></div>
-        <div class= "col"><h4>Phone:<%= item.display_phone %></h4></div>
+        <div class= "col"><h4>Phone: <%= item.display_phone %></h4></div>
         <img class="yelpImg col-sm" src="<%= item.image_url%>">
         <br>
         <a href="/profile" class= "col-sm btn btn-default btn-lng">
@@ -20,3 +20,12 @@
       <% } %>
     </div>
   </div>
+
+  <!-- <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+    <img class="card-img-bottom" src=".../100px180/" alt="Card image cap">
+  </div> -->
