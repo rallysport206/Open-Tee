@@ -2,7 +2,7 @@ body{
     font-family: 'Pontano Sans', sans-serif;
     font-weight: bold;
     color: #00000;
-    background-image: url("https://www.rxwallpaper.site/wp-content/uploads/green-golf-course-walldevil.jpg");
+    background-image: url("./img/background.jpg");
     background-attachment: fixed;
     background-size: cover;
 }
