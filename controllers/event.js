@@ -9,7 +9,7 @@ var client = yelp.client(process.env.API_KEY);
 
 // yelp search
 function yelpSearch(searchTerm, location, callback){
-  client.search({
+  client.search({ 
     term: 'Golf Course',
     location: location
   }).then(response => {
